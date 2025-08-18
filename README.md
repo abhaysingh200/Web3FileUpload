@@ -1,59 +1,51 @@
-📤 Upload Contract
+📂 File Upload Blockchain Project
 
-A simple Solidity smart contract to store URLs on-chain and manage access for other users. Built with Hardhat for easy development and testing.
+Hi! 👋 I’m Abhay, and this is my File Upload DApp.
+I built it to learn how blockchain can be used for secure file storage and access control.
 
-⚡ Features
+📌 What it Does
 
-Add multiple URLs per user
+Upload Files – Users can upload files (images, docs, etc.) that get stored on IPFS.
 
-Grant/revoke access to other users
+Share Access – File owners can grant or revoke access to other users.
 
-Track ownership and access history
+Secure Storage – Metadata and permissions are stored on the blockchain for transparency.
 
-View URLs if access is allowed
+View Files – Users with access can retrieve and view the file anytime.
 
-Check list of users with access
+Basically, it’s like Google Drive but decentralized — no central authority, only blockchain-based access control.
 
+🛠 Tech Stack
 
+Solidity – Smart contracts for access control
 
+React.js – Frontend UI
 
-1️⃣ Compile the Contract
+Ethers.js – Blockchain integration
 
-Before deploying, make sure your contract is compiled:
+IPFS – File storage (instead of a centralized server)
 
-npx hardhat compile
+Hardhat – Smart contract development & testing
 
+💡 How it Works
 
-This generates the artifacts (ABI + bytecode) needed for deployment.
+Connect your wallet (MetaMask).
 
-2️⃣ Deploy the Contract
+Upload a file → File goes to IPFS, hash is stored on blockchain.
 
-Run your deploy script to deploy on the local Hardhat network:
+Owner can share/revoke access with other wallet addresses.
 
-npx hardhat run scripts/deploy.js --network localhost
+Users with access can view/download the file directly.
 
+🚀 How to Run Locally
+# Clone the repo
+git clone https://github.com/abhaysingh200/File-Upload-Blockchain.git
 
-After running this, you’ll see the deployed contract address in the terminal. Copy it carefully.
+# Go into the project folder
+cd File-Upload-Blockchain
 
-3️⃣ Update the Contract Address
+# Install dependencies
+npm install
 
-In your frontend (React, Node, or whatever you’re using), replace the old contract address with the newly deployed contract address from step 2.
-
-Example in a JS file:
-
-export const contractAddress = "0xYourNewContractAddressHere";
-
-4️⃣ Start the Local Node (Optional)
-
-If you haven’t started a local Hardhat node yet, run:
-
-npx hardhat node
-
-
-Then redeploy using the same deploy command. This is useful if you want persistent accounts to interact with.
-
-5️⃣ Run Your Frontend
-
-Finally, start your frontend to interact with the deployed contract:
-
+# Start the frontend
 npm start
